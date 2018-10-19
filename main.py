@@ -32,7 +32,7 @@ def signup_retry():
     if user_name == "":
         user_name_error = "That's not a valid username"
 
-    if user_name.isalpha() == False:
+    if user_name.isalnum() == False:
         user_name_error = "That's not a valid username"
 
     if len(user_name) < 3 or len(user_name) > 20:
@@ -43,7 +43,7 @@ def signup_retry():
     if password == "":
         password_error = "That's not a valid password"
         password = ""
-    if password.isalpha() == False:
+    if password.isalnum() == False:
         password_error = "That's not a valid password"
         password = ""
     if len(password) < 3 or len(password) > 20:

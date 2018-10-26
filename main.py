@@ -34,9 +34,10 @@ def signup_retry():
 
     if user_name.isalnum() == False:
         user_name_error = "That's not a valid username"
-
+        
     if len(user_name) < 3 or len(user_name) > 20:
         user_name_error = "That's not a valid username"
+        
 
 # password error
 
@@ -69,7 +70,10 @@ def signup_retry():
         return redirect("/success?user_name={0}".format(user_name))
     
     else:
-        return render_template("create_form.html", user_name_error=user_name_error,
+        return render_template("create_form.html",
+        user_name=user_name,
+        email=email,
+        user_name_error=user_name_error,
         password_error=password_error,
         verify_error=verify_error,
         email_error=email_error)

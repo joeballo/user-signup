@@ -11,7 +11,7 @@
                         <label for="user_name">Username:</label>
                     </td>
                     <td>
-                        <input type="text" name="user_name" id="user_name" />
+                        <input type="text" name="user_name" id="user_name" value="{{ user_name }}" />
                         <span class="error">{{ user_name_error }}</span>
                     </td>
                 </tr>
@@ -38,7 +38,7 @@
                         <label for="email">Email (Optional):</label>
                     </td>
                     <td>
-                        <input type="text" name="email" id="email" />
+                        <input type="text" name="email" id="email" value="{{ email }}" />
                         <span class="error">{{ email_error }}</span>
                     </td>
                 </tr>

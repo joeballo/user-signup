@@ -31,12 +31,15 @@ def signup_retry():
 
     if user_name == "":
         user_name_error = "That's not a valid username"
+        user_name = ""
 
     if user_name.isalnum() == False:
         user_name_error = "That's not a valid username"
+        user_name = ""
         
     if len(user_name) < 3 or len(user_name) > 20:
         user_name_error = "That's not a valid username"
+        user_name = ""
         
 
 # password error
@@ -59,10 +62,13 @@ def signup_retry():
 # email error
     if email.count("@") != 1:
         email_error = "That's not a valid email"
+        email = ""
+        
     if email.count(".") != 1:
         email_error = "That's not a valid email"
-    if email == "":
-        email_error = ""
+        email = ""
+        
+        
 
 # errors corrected or show error messages
 
